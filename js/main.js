@@ -36,3 +36,26 @@ function sendDeposit(email, amount, platform) {
         console.error('There was a problem sending your deposit:', error);
     });
 }
+
+// PayPal configuration
+paypal.Buttons({
+  createOrder: function(data, actions) {
+    return actions.order.create({
+      purchase_units: [{
+        amount: {
+          value: amount
+        }
+      }]
+    });
+  },
+  onApprove: function(data, actions) {
+    return actions.order.capture().then(function(details) {
+      // Send deposit with API call
+      sendDeposit(email, amount, platform, details.id);
+    });
+  },
+  onError: function(err) {
+    console.error('There was an error processing your payment:', err);
+  }
+}).render('body');
+
