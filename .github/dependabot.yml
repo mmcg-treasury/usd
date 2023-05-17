@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    update-strategy: "auto"
+    automerge: true
+    reviewers:
+      - "monica"
+    assignees:
+      - "monica"
+    author:
+      - "monica"
