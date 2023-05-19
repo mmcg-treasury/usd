@@ -1,27 +1,130 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Instant Deposits App</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://www.paypal.com/sdk/js?client-id=${{ PP_CLIENT_ID }}"></script>
-    </head>
-    <body>
-        <h1>Instant Deposits App</h1>
-        <form>
-            <input type="text" placeholder="Enter recipient's email address">
-            <input type="number" placeholder="Enter amount">
-            <select>
-                <option value="PayPal">PayPal</option>
-                <option value="CashApp">CashApp</option>
-                <option value="GoogleWallet">Google Wallet</option>
-                <option value="AppleWallet">Apple Wallet</option>
-                <option value="Venmo">Venmo</option>
-                <option value="DebitCard">Debit Card</option>
-                <option value="CheckCard">Check Card</option>
-            </select>
-            <button>Send Deposit</button>
-        </form>
-        <script src="js/main.js"></script>
-    </body>
+<html lang="en">
+<head>
+    <title>Instant Deposits App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="og:image" content="https://www.instantdeposits.com/assets/images/instant-deposits-logo.png">
+    <meta name="og:description" content="Instant Deposit App for a better today and a brighter tomorrow">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            font-size: 48px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        form {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        input[type="text"], input[type="number"], select {
+            padding: 12px;
+            margin: 6px 0;
+            border: none;
+            border-radius: 4px;
+            box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+            width: 75%;
+            font-size: 16px;
+        }
+        
+        .receiver-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .receiver-info label,
+        .receiver-info input {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        
+        @media screen and (min-width: 768px) {
+            .receiver-info label,
+            .receiver-info input {
+                width: 48%;
+            }
+        }
+        
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            margin: 12px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 75%;
+            font-size: 16px;
+        }
+        
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Instant Deposits App</h1>
+    <form>
+        <select>
+            <option value="PayPal">PayPal</option>
+            <option value="CashApp">CashApp</option>
+            <option value="GoogleWallet">Google Wallet</option>
+            <option value="AppleWallet">Apple Wallet</option>
+            <option value="Venmo">Venmo</option>
+            <option value="DebitCard">Debit Card</option>
+            <option value="CheckCard">Check Card</option>
+            <option value="CreditCard">Credit Card</option>
+            <option value="VirtualBank">Virtual Bank</option>
+            <option value="eCheck">eCheck</option>
+            <option value="eCash">eCash</option>
+            <option value="ACH">ACH</option>
+            <option value="ACH/ACH">ACH/ACH</option>
+            <option value="EFT">EFT</option>
+            <option value="Prepaid">Prepaid</option>
+        </select>
+        <input type="number" placeholder="Enter amount">
+        <button>Send Deposit</button>
+        <button>Cancel</button>
+        <button>Show options</button>
+        <button>Hide options</button>
+        <button>Close</button>
+    </form>
+    <h3>Receiver Information</h3>
+    <div class="receiver-info">
+        <label>Name:</label>
+        <input type="text">
+        <label>Phone:</label>
+        <input type="text">
+        <label>Email:</label>
+        <input type="text">
+        <label>Address:</label>
+        <input type="text">
+        <label>City:</label>
+        <input type="text">
+        <label>State:</label>
+        <input type="text">
+        <label>Zip/Postal Code:</label>
+        <input type="text">
+        <label>Country:</label>
+        <input type="pick">
+    </div>
+    <br>
+    <br>
+    <center>
+        <strong>
+            <footer>INSTANT DEPOSIT APP</footer>
+        </strong>
+    </center>
+</body>
 </html>
