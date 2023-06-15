@@ -4,11 +4,65 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    automerged:
+      security: true
+    labels:
+      - "dependencies"
+      - "npm"
+  - package-ecosystem: "composer"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    automerged:
+      security: true
+    labels:
+      - "dependencies"
+      - "composer"
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    automerged:
+      security: true
+    labels:
+      - "dependencies"
+      - "pip"
+  - package-ecosystem: "gem"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    automerged:
+      security: true
+    labels:
+      - "dependencies"
+      - "gem"
+  - package-ecosystem: "maven"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    automerged:
+      security: true
+    labels:
+      - "dependencies"
+      - "maven"
+  - package-ecosystem: "nuget"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    automerged:
+      security: true
+    labels:
+      - "dependencies"
+      - "nuget"
+  - package-ecosystem: "*"
+    directory: "/"
+    schedule:
+      interval: "daily"
     update-strategy: "auto"
     automerge: true
     reviewers:
-      - "monica"
+      - "*"
     assignees:
-      - "monica"
+      - "*"
     author:
-      - "monica"
+      - "*"
